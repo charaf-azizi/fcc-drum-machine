@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import './drum_machine.scss'
-class Drum_machine extends Component{
+class DrumMachine extends Component{
 constructor(props){
     super(props);
     this.state = {
@@ -46,7 +46,7 @@ handleClick = (x)=>{
 handleKeyDown = (event)=>{
     let objK = Object.keys(this.state.audioObj);
    for(let i=0; i< this.state.keyArr.length;i++){
-    if(event.key.toLocaleLowerCase() == this.state.keyArr[i].toLocaleLowerCase() ){
+    if(event.key.toLocaleLowerCase() === this.state.keyArr[i].toLocaleLowerCase() ){
         const audio = new Audio()
         audio.src = this.state.audioObj[objK[i]];
         this.setState({displayer:objK[i]})
@@ -83,4 +83,4 @@ render(){
     )
 }
 }
-export default Drum_machine;
+export default DrumMachine;
