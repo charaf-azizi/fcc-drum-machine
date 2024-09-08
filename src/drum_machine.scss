@@ -1,0 +1,91 @@
+
+
+
+#drum-machine{
+    display: flex;
+  //  background-image: linear-gradient(to left, rgba(255,0,0,0), srgb(220, 204, 178));;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    right:20%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 2%;
+    overflow: hidden;
+}
+.drum-pad{
+    
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+    
+}
+.drum-pad > div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    height: 30%;
+    margin: auto;
+   // background-color: rgb(255, 255, 255);
+    width: 30%;
+    border: 1px solid black;
+}
+.drum-pad> .active{
+    background-color:  rgb(140, 122, 122);
+    font-size: xx-large;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #c6e6b87b;
+}
+
+.drum-pad> div:active{
+    background-color:  rgb(140, 122, 122);
+    font-size: xx-large;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #c6e6b87b;
+}
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   width: 35%;
+   background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(42, 38, 38));
+}
+#display{
+    padding: 10px;
+    font: 1em sans-serif;
+    text-align: center;
+    display: inline-block;
+    width: 70%;
+    background-color: white;
+}
+input[type=range] {
+    display: inline-block;
+    height: 38px;
+    -webkit-appearance: none;
+    width: 70%;
+   background-color: inherit;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000;
+    background: #3071A9;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+  }
